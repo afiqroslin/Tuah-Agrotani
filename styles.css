@@ -88,8 +88,6 @@ body {
     color: white;
     text-align: center;
     overflow: hidden;
-    padding-top: 200px;
-    padding-bottom: 200px;
 }
 
 /* Animation definitions */
@@ -238,6 +236,26 @@ body {
 }
 
 /* Responsive tweaks for hero section */
+
+@media (max-width: 1400px) {
+    .hero-section {
+        height: auto;
+        padding: 200px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-logo {
+        width: 60%;
+    }
+}
 @media (max-width: 1200px) {
     .hero-section {
         height: auto;
@@ -245,7 +263,7 @@ body {
     }
 
     .hero-section h1 {
-        font-size: 4.5rem;
+        font-size: 4.0rem;
     }
 
     .hero-section p {
