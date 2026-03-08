@@ -237,10 +237,10 @@ body {
 
 /* Responsive tweaks for hero section */
 
-@media (max-width: 1400px) {
-    .hero-section {
+@media (max-width: 1800px) {
+      .hero-section {
         height: auto;
-        padding: 200px 20px;
+        padding: 80px 20px;
     }
 
     .hero-section h1 {
@@ -256,6 +256,7 @@ body {
         width: 60%;
     }
 }
+
 @media (max-width: 1200px) {
     .hero-section {
         height: auto;
@@ -263,7 +264,7 @@ body {
     }
 
     .hero-section h1 {
-        font-size: 4.0rem;
+        font-size: 4.5rem;
     }
 
     .hero-section p {
