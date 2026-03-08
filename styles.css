@@ -78,11 +78,6 @@ body {
     color: var(--primary-green) !important;
 }
 
-.navbar-collapse {
-    background-color: var(--dark-green);
-    padding: 0px 10px;
-}
-
 /* Hero Section */
 .hero-section {
     position: relative;
