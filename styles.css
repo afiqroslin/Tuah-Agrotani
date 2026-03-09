@@ -705,6 +705,15 @@ section {
 }
 
 .contact-box p {
+    text-align: center;
+}
+
+.contact-box .phone-numbers {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-box p {
     color: #ffffff;
     margin: 0;
     line-height: 1.6;
