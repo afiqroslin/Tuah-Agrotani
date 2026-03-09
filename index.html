@@ -44,9 +44,34 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="assets/Montage.mp4" type="video/mp4">
-        </video>
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/farm.png" alt="Farm" class="hero-carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pembungkusan bantal.jpeg" alt="Packaging" class="hero-carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pembungkusan kecut haba.jpeg" alt="Packaging" class="hero-carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pembungkusan kotak.jpeg" alt="Packaging" class="hero-carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pembungkusan kristal.jpeg" alt="Packaging" class="hero-carousel-img">
+                </div>
+            </div>
+
+            <!-- Left / Right buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
         <div class="hero-content">
             <h1>Tuah Agrotani<br><span class="highlight-green">Sdn Bhd</span></h1>
             <p>Cultivated with Care, Shared Together</p>

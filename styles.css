@@ -91,14 +91,45 @@ body {
     overflow: hidden;
 }
 
-.hero-video {
+.hero-carousel {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
+}
+
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+    height: 100%;
+}
+
+.hero-carousel-img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    z-index: -2;
+}
+
+/* Push nav buttons to sides, vertically centered */
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: rgba(0, 0, 0, 0.35); */
+    border-radius: 50%;
+    pointer-events: all;
+}
+
+.hero-carousel .carousel-control-prev {
+    left: 20px;
+}
+
+.hero-carousel .carousel-control-next {
+    right: 20px;
 }
 
 /* Animation definitions */
@@ -145,14 +176,21 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, rgba(37, 41, 38, 0.7), rgba(14, 100, 46, 0.5));
-    z-index: -1;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 5;
     max-width: 900px;
     padding: 0 20px;
+    pointer-events: none;
+}
+
+.hero-content a,
+.hero-content button {
+    pointer-events: all;
 }
 
 
