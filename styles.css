@@ -91,13 +91,14 @@ body {
     overflow: hidden;
 }
 
+/* Carousel Background */
 .hero-carousel {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
 }
 
 .hero-carousel .carousel-inner,
@@ -111,26 +112,54 @@ body {
     object-fit: cover;
 }
 
-/* Push nav buttons to sides, vertically centered */
+/* Dark overlay on top of carousel */
+.hero-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(14, 100, 46, 0.5));
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Prev / Next Buttons */
 .hero-carousel .carousel-control-prev,
 .hero-carousel .carousel-control-next {
     z-index: 10;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     top: 50%;
     transform: translateY(-50%);
-    /* background-color: rgba(0, 0, 0, 0.35); */
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
+    opacity: 1;
     pointer-events: all;
 }
 
-.hero-carousel .carousel-control-prev {
-    left: 20px;
+/* Indicators */
+.hero-carousel .carousel-indicators {
+    z-index: 10;
+    pointer-events: all;
+    margin-bottom: 1.5rem;
 }
 
-.hero-carousel .carousel-control-next {
-    right: 20px;
+.hero-carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    pointer-events: all;
+    transition: background-color 0.3s;
 }
+
+.hero-carousel .carousel-indicators button.active {
+    background-color: #ffffff;
+}
+
 
 /* Animation definitions */
 @keyframes fadeInUp {
@@ -176,21 +205,14 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, rgba(37, 41, 38, 0.7), rgba(14, 100, 46, 0.5));
-    z-index: 0;
-    pointer-events: none;
+    z-index: -1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 5;
+    z-index: 1;
     max-width: 900px;
     padding: 0 20px;
-    pointer-events: none;
-}
-
-.hero-content a,
-.hero-content button {
-    pointer-events: all;
 }
 
 
