@@ -576,6 +576,69 @@ section {
     }
 }
 
+ /* Sayur-sayuran Section */
+.vegetables-gallery-section {
+    background-color: #fafafa;
+    padding: 40px 0;
+    border-radius: 12px;
+}
+
+
+.vegetable-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.vegetable-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.vegetable-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.vegetable-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .vegetable-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .vegetable-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .vegetables-header h2 {
+        font-size: 2rem;
+    }
+    
+    .vegetable-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .vegetable-item img {
+        height: 150px;
+    }
+}
+
+
 .product-showcase-section {
     margin-top: 3rem;
 }
