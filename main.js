@@ -90,3 +90,25 @@ document.addEventListener('DOMContentLoaded', function() {
         section.appendChild(btn);
     });
 });
+// Language Toggle
+document.addEventListener('DOMContentLoaded', function () {
+    let currentLang = 'en';
+    const langToggle = document.getElementById('langToggle');
+
+    if (!langToggle) {
+        console.warn('langToggle button not found');
+        return;
+    }
+
+    langToggle.addEventListener('click', function () {
+        currentLang = currentLang === 'en' ? 'bm' : 'en';
+        langToggle.textContent = currentLang === 'en' ? 'BM' : 'ENG';
+
+        document.querySelectorAll('[data-en]').forEach(function (el) {
+            const text = currentLang === 'en'
+                ? el.getAttribute('data-en')
+                : el.getAttribute('data-bm');
+            if (text) el.innerHTML = text;
+        });
+    });
+});

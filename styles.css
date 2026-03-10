@@ -864,3 +864,34 @@ section {
     margin: 0;
 }
 
+
+/* Language Toggle Button */
+.lang-toggle {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.lang-toggle:hover {
+    background-color: var(--dark-green);
+    color: white;
+}
+
+.navbar.scrolled .lang-toggle {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+@media (max-width: 991.98px) {
+    .lang-toggle {
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0 !important;
+    }
+}
