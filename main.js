@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Cert modal functionality
+const certModal = document.getElementById('certModal');
+if (certModal) {
+    certModal.addEventListener('show.bs.modal', function (event) {
+        const box = event.relatedTarget;
+        document.getElementById('certModalImage').src = box.getAttribute('data-image');
+    });
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

@@ -539,7 +539,8 @@ section {
 }
 
 .btn-minimum-order {
-    background-color: #f59e0b;
+    /* background-color: #f59e0b; */
+    background-color: var(--primary-green);
     color: white;
     border: none;
     padding: 15px 50px;
@@ -547,11 +548,14 @@ section {
     font-weight: 600;
     border-radius: 50px;
     transition: all 0.3s;
-    margin-top: 2rem;
+    margin: 1rem;
+
 }
 
 .btn-minimum-order:hover {
-    background-color: #d97706;
+    /* background-color: #d97706; */
+    background-color: var(--dark-green);
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
 }
@@ -769,6 +773,42 @@ section {
     border-radius: 8px;
 }
 
+.cert-section { text-align: center; }
+
+.cert-title {
+    color: var(--dark-green);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+
+.cert-box {
+    background-color: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.cert-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: var(--primary-green);
+}
+
+.cert-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
 
 /* Contact Section */
 .contact-section {
